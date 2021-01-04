@@ -1,0 +1,185 @@
+:root{
+
+    /*colores*/
+    --principal:#121616;
+    --secundario: #283F40;
+    --terciario: #8D9792;
+    --textoTitulo:#DFDCCC;
+    --body:#EEECEE;
+    --bordes: #D0E8DD;
+    --oscuro: #141618;
+    --error: #FF3C32;
+    --errorSombra: #FF3C3280;
+    --enfasis: #FBA905;
+    --btnPrincipal:#61FB58;
+    --btnPrincipalHover:#5BAD23;
+
+    /*tipografía*/
+    --heading-font:'Artifika', serif;
+    --body-font: 'Lato', sans-serif;
+}
+
+body{
+    color: var(--principal);
+    background-color: var(--body);
+    margin: 0;
+    font-family: var(--body-font);
+}
+.barraTitulo{
+    background-color: var(--principal);
+    padding: 1rem;
+    margin-bottom: 2rem;
+}
+.titulo{
+    color: var(--textoTitulo);
+    font-family: var(--heading-font);
+    margin: 0;
+    text-align: center;
+}
+.card-title{
+    font-size: 1.1rem;
+    text-align: center;
+}
+.card{
+    background-color: var(--bordes);
+}
+.smsError{
+    display: none;
+    font-size: 0.8rem;
+    margin: 0.5rem;
+    color: var(--error);
+}
+.contenedor{
+    overflow:hidden;
+}
+.contenedor:hover .imagen{
+    transform:scale(1.3);
+    transition-duration: 1s;
+    transform: rotateY(40deg);
+    transform-style: preserve-3d;
+}
+.imgQr{
+    width: 50%;
+    height: 50%;
+    display: none;
+}
+.btn{
+    color: var(--body);
+}
+.btn-principal{
+    background-color: var(--btnPrincipal);
+}
+.btn-principal:hover{
+    color:var(--body);
+    background-color: var(--btnPrincipalHover);
+}
+form{
+    color: var(--secundario);
+}
+input{
+    border: var(--bordes) solid 1px;
+}
+.btn-descargar{
+    display: none;
+}
+.btnColors{
+    width: 50px;
+    height: 50px;
+    background-color: yellow;
+    border-radius: 50%;
+    border: var(--principal) solid 1px;
+}
+.container.collapse{
+    background-color: white;
+}
+.bordeColor{
+    border: var(--bordes) solid 1px;
+    border-radius: 5px;
+}
+.anclaTittle{
+    padding: .5rem;
+    color: var(--principal);
+    text-decoration: none;
+}
+.nomColor{
+    margin: 0;
+}
+a:hover{
+    color: var(--btnPrincipalHover);
+}
+.btn-negro{
+    background-color: #000000;
+}
+.btn-gris{
+    background-color: #808080;
+}
+.btn-marron{
+    background-color: #800000;
+}
+.btn-naranja{
+    background-color: #EB481E;
+}
+.btn-violeta{
+    background-color: #C91EEB;
+}
+.btn-fucsia{
+    background-color: #F520CA;
+}
+.btn-azul{
+    background-color: #4F5BDB;
+}
+.btn-celeste{
+    background-color: #5A92F9;
+}
+.btn-amarillo{
+    background-color: #F5D607;
+}
+.btn-lima{
+    background-color: #0AFF2B;
+}
+.btn-verde{
+    background-color: #008000;
+}
+.btn-teal{
+    background-color: #008080;
+}
+.container.collapse{
+    padding-bottom: .8rem;
+    padding-top: .8rem;
+}
+.footer{
+    font-size: 20px;
+    text-align: center;
+    background-color: var(--principal);
+    color: var(--textoTitulo);
+}
+.pInformacion{
+    font-size: 12px;
+    margin: 0;
+    padding: .3rem .3rem .3rem .3rem;
+}
+.span{
+    margin: 0;
+    font-style: italic;
+    font-size: 12px;
+}
+.footer h4{
+    color: var(--terciario);
+    padding: 1rem;
+    font-size: var(--body-font);
+    font-size: 16px;
+}
+.parrafo{
+    font-size: 16px;
+}
+.divider{
+    height: 1px;
+    border-top: var(--terciario) solid .2px;
+}
+.container h3{
+    font-family: var(--heading-font);
+    color: var(--secundario);
+}
+.container ol{
+    line-height: 2rem;
+}

@@ -1,0 +1,516 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+        href="https://fonts.googleapis.com/css2?family=Artifika&family=Lato&display=swap"
+        rel="stylesheet"
+        />
+        <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+        <link rel="stylesheet" href="css/style.css" />
+        <title>RapidCode</title>
+    </head>
+    <body>
+        <div class="container-xxl barraTitulo">
+        <header class="site-header sticky-top py-1">
+            <h1 class="titulo">RapidCode</h1>
+            <h6 class="titulo">Generador de código QR</h6>
+        </header>
+        </div>
+        <div class="container-sm px-4">
+        <div class="row g-3">
+            <!--Facebook-->
+            <div class="col col-sm-6 offset-sm-3 col-md-3 offset-md-0">
+            <div class="card">
+                <div class="contenedor">
+                <img
+                    src="img/qrFacebook.png"
+                    class="card-img-top imagen"
+                    alt="Qr para Facebook"
+                    type="button"
+                    data-bs-toggle="modal"
+                    data-bs-target="#staticBackdropFacebook"
+                />
+                </div>
+                <div class="card-body">
+                <h5 class="card-title">Facebook</h5>
+                </div>
+            </div>
+            </div>
+            <!--Twitter-->
+            <div class="col col-sm-6 offset-sm-3 col-md-3 offset-md-0">
+            <div class="card">
+                <div class="contenedor">
+                <img
+                    src="img/qrTwitter.png"
+                    class="card-img-top imagen"
+                    alt="Qr para Twitter"
+                    type="button"
+                    data-bs-toggle="modal"
+                    data-bs-target="#staticBackdropTwitter"
+                />
+                </div>
+                <div class="card-body">
+                <h5 class="card-title">Twitter</h5>
+                </div>
+            </div>
+            </div>
+            <!--Instagram-->
+            <div class="col col-sm-6 offset-sm-3 col-md-3 offset-md-0">
+            <div class="card">
+                <div class="contenedor">
+                <img
+                    src="img/qrInstagram.png"
+                    class="card-img-top imagen"
+                    alt="Qr para Instagram"
+                    type="button"
+                    data-bs-toggle="modal"
+                    data-bs-target="#staticBackdropInstagram"
+                />
+                </div>
+                <div class="card-body">
+                <h5 class="card-title">Instagram</h5>
+                </div>
+            </div>
+            </div>
+            <!--WebSites-->
+            <div class="col col-sm-6 offset-sm-3 col-md-3 offset-md-0">
+            <div class="card">
+                <div class="contenedor">
+                <img
+                    src="img/qrWeb.png"
+                    class="card-img-top imagen"
+                    alt="Qr para Facebook"
+                    type="button"
+                    data-bs-toggle="modal"
+                    data-bs-target="#staticBackdropWebSites"
+                />
+                </div>
+                <div class="card-body">
+                <h5 class="card-title">Sitios Web</h5>
+                </div>
+            </div>
+            </div>
+        </div>
+        </div>
+        <!-- Modal Facebook -->
+        <div
+        class="modal fade"
+        id="staticBackdropFacebook"
+        data-bs-backdrop="static"
+        data-bs-keyboard="false"
+        tabindex="-1"
+        aria-labelledby="staticBackdropLabel"
+        aria-hidden="true"
+        >
+        <div class="modal-dialog">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="staticBackdropLabel">
+                Código Qr para Facebook
+                </h5>
+                <button
+                type="button"
+                id="closeFacebook"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+                ></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                <div class="mb-3">
+                    <label for="recipientNameFacebook" class="col-form-label"
+                    >Perfil de Facebook:</label
+                    >
+                    <input
+                    type="text"
+                    class="form-control"
+                    id="recipientNameFacebook"
+                    required
+                    />
+                    <div class="smsError" id="errorURLFacebook">
+                    Por favor escriba la URL del perfil de Facebook.
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <img class="imgQr" id="codeFacebook" src="" />
+                </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button
+                type="button"
+                class="btn btn-secondary"
+                id="cerrarFacebook"
+                data-bs-dismiss="modal"
+                >
+                Cerrar
+                </button>
+                <button
+                type="button"
+                class="btn btn-principal"
+                id="btnGenerarFacebook"
+                >
+                Generar
+                </button>
+                <a
+                href="http://api.qrserver.com/v1/create-qr-code/?data=https://www.facebook.com/jossy.sanchez.357/&size=250x250&color=3b5998&bgcolor=DFDCCC&qzone=1.png"
+                download="codeQr-Facebook.png"
+                target="_blank"
+                type="button"
+                class="btn btn-principal btn-descargar"
+                id="btnDescargarFacebook"
+                >Descargar</a
+                >
+            </div>
+            </div>
+        </div>
+        </div>
+
+        <!-- Modal Twitter -->
+        <div
+        class="modal fade"
+        id="staticBackdropTwitter"
+        data-bs-backdrop="static"
+        data-bs-keyboard="false"
+        tabindex="-1"
+        aria-labelledby="staticBackdropLabel"
+        aria-hidden="true"
+        >
+        <div class="modal-dialog">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="staticBackdropLabel">
+                Código Qr para Twitter
+                </h5>
+                <button
+                type="button"
+                id="closeTwitter"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+                ></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                <div class="mb-3">
+                    <label for="recipientNameTwitter" class="col-form-label"
+                    >Perfil de Twitter:</label
+                    >
+                    <input
+                    type="text"
+                    class="form-control"
+                    id="recipientNameTwitter"
+                    required
+                    />
+                    <div class="smsError" id="errorURLTwitter">
+                    Por favor escriba la URL del perfil de Twitter.
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <img class="imgQr" id="codeTwitter" src="" />
+                </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button
+                type="button"
+                class="btn btn-secondary"
+                id="cerrarTwitter"
+                data-bs-dismiss="modal"
+                >
+                Cerrar
+                </button>
+                <button
+                type="button"
+                class="btn btn-principal"
+                id="btnGenerarTwitter"
+                >
+                Generar
+                </button>
+                <button
+                type="button"
+                class="btn btn-principal btn-descargar"
+                id="btnDescargarTwitter"
+                >
+                Descargar
+                </button>
+            </div>
+            </div>
+        </div>
+        </div>
+        <!-- Modal Instagram -->
+        <div
+        class="modal fade"
+        id="staticBackdropInstagram"
+        data-bs-backdrop="static"
+        data-bs-keyboard="false"
+        tabindex="-1"
+        aria-labelledby="staticBackdropLabel"
+        aria-hidden="true"
+        >
+        <div class="modal-dialog">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="staticBackdropLabel">
+                Código Qr para Instagram
+                </h5>
+                <button
+                type="button"
+                id="closeInstagram"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+                ></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                <div class="mb-3">
+                    <label for="recipientNameInstagram" class="col-form-label"
+                    >Perfil de Instagram:</label
+                    >
+                    <input
+                    type="text"
+                    class="form-control"
+                    id="recipientNameInstagram"
+                    required
+                    />
+                    <div class="smsError" id="errorURLInstagram">
+                    Por favor escriba la URL del perfil de Instagram.
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <img class="imgQr" id="codeInstagram" src="" />
+                </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button
+                type="button"
+                class="btn btn-secondary"
+                id="cerrarInstagram"
+                data-bs-dismiss="modal"
+                >
+                Cerrar
+                </button>
+                <button
+                type="button"
+                class="btn btn-principal"
+                id="btnGenerarInstagram"
+                >
+                Generar
+                </button>
+                <button
+                type="button"
+                class="btn btn-principal btn-descargar"
+                id="btnDescargarInstagram"
+                >
+                Descargar
+                </button>
+            </div>
+            </div>
+        </div>
+        </div>
+
+        <!-- Modal WebSites -->
+        <div
+        class="modal fade"
+        id="staticBackdropWebSites"
+        data-bs-backdrop="static"
+        data-bs-keyboard="false"
+        tabindex="-1"
+        aria-labelledby="staticBackdropLabel"
+        aria-hidden="true"
+        >
+            <div class="modal-dialog">
+                <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">
+                    Código Qr para WebSites
+                    </h5>
+                    <button
+                    type="button"
+                    id="closeWebSites"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                    ></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                    <div class="mb-3">
+                        <label for="recipientNameWebSites" class="col-form-label"
+                        >Perfil de WebSites:</label
+                        >
+                        <input
+                        type="text"
+                        class="form-control"
+                        id="recipientNameWebSites"
+                        />
+                        <div class="smsError" id="errorURLWebSites">
+                        Por favor escriba la URL del perfil de WebSites.
+                        </div>
+                    </div>
+                    <div class="bordeColor mb-3">
+                        <div class="row">
+                            <div class="col-2">
+                                <a
+                                class="anclaTittle"
+                                data-bs-toggle="collapse"
+                                href="#collapsePaletaColores"
+                                role="button"
+                                aria-expanded="false"
+                                aria-controls="collapsePaletaColores"
+                                id="colorDesplegar"
+                                onclick="abrir()"
+                                >
+                                Color:
+                                </a>
+                            </div>
+                            <div class="col-10">
+                                <strong id="colorQr" class="nomColor">Negro</strong>
+                            </div>
+                        </div >
+                        <div class="container collapse" id="collapsePaletaColores">
+                            <!--Colores-->
+                            <div class="row row-cols-4 g-3">
+                                <div class="col-md-2">
+                                    <div id="btnNegro" class="btnColors btn-negro" onclick="color('Negro', '#000000')"></div>
+                                </div>
+                                <div class="col-md-2">
+                                    <div id="btnGris" class="btnColors btn-gris" onclick="color('Gris', '#808080')"></div>
+                                </div>
+                                <div class="col-md-2">
+                                    <div id="btnVerde" class="btnColors btn-verde" onclick="color('Verde', '#008000')"></div>
+                                </div>
+                                <div class="col-md-2">
+                                    <div id="btnLima" class="btnColors btn-lima" onclick="color('Lima', ' #0AFF2B')"></div>
+                                </div>
+                                <div class="col-md-2">
+                                    <div id="btnAmarillo" class="btnColors btn-amarillo" onclick="color('Amarillo', '#F5D607')"></div>
+                                </div>
+                                <div class="col-md-2 ">
+                                    <div id="btnNaranja" class="btnColors btn-naranja" onclick="color('Naranja', ' #EB481E')"></div>
+                                </div>
+                                <div class="col-md-2 ">
+                                    <div id="btnMarron" class="btnColors btn-marron" onclick="color('Marron', '#800000')"></div>
+                                </div>
+                                <div class="col-md-2 ">
+                                    <div id="btnTeal" class="btnColors btn-teal" onclick="color('Teal', '#008080')"></div>
+                                </div>
+                                <div class="col-md-2 ">
+                                    <div id="btnCeleste" class="btnColors btn-celeste" onclick="color('Celeste', '#5A92F9')"></div>
+                                </div>
+                                <div class="col-md-2 ">
+                                    <div id="btnAzul" class="btnColors btn-azul" onclick="color('Azul', ' #4F5BDB')"></div>
+                                </div>
+                                <div class="col-md-2 ">
+                                    <div id="btnVioleta" class="btnColors btn-violeta" onclick="color('Violeta', '#C91EEB')"></div>
+                                </div>
+                                <div class="col-md-2 ">
+                                    <div id="btnFucsia" class="btnColors btn-fucsia" onclick="color('Fucsia', ' #F520CA')"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center">
+                        <img class="imgQr" id="codeWebSites" src="" />
+                    </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button
+                    type="button"
+                    class="btn btn-secondary"
+                    id="cerrarWebSites"
+                    data-bs-dismiss="modal"
+                    >
+                    Cerrar
+                    </button>
+                    <button
+                    type="button"
+                    class="btn btn-principal"
+                    id="btnGenerarWebSites"
+                    >
+                    Generar
+                    </button>
+                    <button
+                    type="button"
+                    class="btn btn-principal btn-descargar"
+                    id="btnDescargarWebSites"
+                    >
+                    Descargar
+                    </button>
+                </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="container">
+            <div class="divider"></div>
+            <br>
+            <h3>Instrucciones para el uso del generador QR RapidCode</h3>
+            <ol>
+                <li>Seleccione el tipo de <strong>código QR</strong> que necesite perfil de redes sociales o páginas web.</li>
+                <li>Llenar los datos que se piden en el formulario.</li>
+                <li>Clic en el botón Generar</li>
+                <li>Descargar el <strong>código Qr</strong> generado</li>
+            </ol>
+            <br>
+            <div class="divider"></div>
+            <br>
+            <h3>Recomendaciones al usar Códigos QR</h3>
+            <p>Si ya generaste tu código QR y tienes la intención de usarlo, imprimirlo, compartirlo te
+                dejo las siguientes recomendaciones
+            </p>
+            <ul>
+                <li>Los <strong>Códigos QR</strong> que proporcionan una lectura sencilla y confiable son los clásicos negro y blanco.</li>
+                <li>Si cambias el color por favor asegurate que haya un excelente contraste entre el fondo y el del código.</li>
+                <li>Consulta y revisa en varios lectores de código para comprobar que su lectura es correcta y apropiada.</li>
+                <li>Realiza revisiones de varios dispositivos móviles y de distinta gama, que sea media o baja.</li>
+            </ul>
+        </div>
+        <footer class="footer container-fluid">
+            <div class="row ">
+                <div class="col-sm-10 col-md-6">
+                    <h4>SOBRE RAPIDCODE</h4>
+                    <p class="parrafo"><strong>RapidCode</strong> es un generador de códigos QR, la iniciativa de este proyecto se dio para 
+                        promoveer el uso de los códigos QR.
+                    </p>
+                    <p class="parrafo">En esta página podrás generar códigos QR, de una forma fácil, rápida y gratuita para todos los usuarios y
+                        casos en los que necesites utilizar el código QR, ya sea para perfil en tus redes sociales o tus sitios web.
+                    </p>
+                </div>
+                <div class="col-sm-10 col-md-6">
+                    <h4>PARA CONTACTARME</h4>
+                    <p class="parrafo">Desarrollo de páginas web y aplicativos</p>
+                    <div class="row justify-content-center">
+                        <div class="col-sm-2">
+                            <a href="https://m.me/Josyy Sanchez" target="_blank"><img src="img/icon/facebook.svg" width="30" alt="Facebook" srcset=""></a>
+                        </div>
+                        <div class="col-sm-2">
+                            <a href="https://www.instagram.com/Josseline.Sanchez.B/" target="_blank"><img src="img/icon/instagram.svg" width="30" alt="Instagram" srcset=""></a>
+                        </div>
+                        <div class="col-sm-2">
+                            <a href="https://api.whatsapp.com/send?phone=0992369438" target="_blank"><img src="img/icon/whatsapp.svg" width="30" alt="Whatsapp" srcset=""></a>
+                        </div>
+                        <div class="col-sm-2">
+                            <a href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=josselinesanchezb@gmail.com" target="_blank"><img src="img/icon/correo-electronico.svg" width="30" alt="correo-electronico" srcset=""></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p class="pInformacion">
+                © Rapid Code 2021 - Todos los derechos reservados |
+                <span class="span">
+                    <strong>'QR Code'</strong> es una marca de DENSO WAVE INCORPORATED
+                </span>
+                | por Josseline Sánchez
+            </p>
+        </footer>
+        <script src="assets/js/bootstrap.min.js"></script>
+        <script src="js/script.js"></script>
+    </body>
+    </html>
