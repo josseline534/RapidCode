@@ -119,16 +119,16 @@ btnGenerarInstagram.addEventListener("click", function(e){
 
 //WebSites
 closeWebSites.addEventListener("click", function (e){
-    limpiar(recipientNameWebSites,codeWebSites, errorURLWebSites, btnGenerarWebSites, btnDescargarWebSites)
+    limpiar(recipientNameWebSites,codeWebSites, errorURLWebSites, btnGenerarWebSites, btnDescargarWebSite)
     collapsePaletaColores.style.display="none"
 },false)
 cerrarWebSites.addEventListener("click", function (e){
-    limpiar(recipientNameWebSites, codeWebSites, errorURLWebSites, btnGenerarWebSites, btnDescargarWebSites)
+    limpiar(recipientNameWebSites, codeWebSites, errorURLWebSites, btnGenerarWebSites, btnDescargarWebSite)
     collapsePaletaColores.style.display="none"
 },false)
 
 btnGenerarWebSites.addEventListener("click", function(e){
     let color=colorBtn()
     collapsePaletaColores.style.display="none";
-    validarUrl(cadenaUrl[3],recipientNameWebSites,errorURLWebSites, codeWebSites, btnGenerarWebSites, btnDescargarWebSites, color[0])
+    validarUrl(cadenaUrl[3],recipientNameWebSites,errorURLWebSites, codeWebSites, btnGenerarWebSites, btnDescargarWebSite, color[0])
 },false)
